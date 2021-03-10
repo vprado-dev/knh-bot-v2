@@ -17,6 +17,7 @@ module.exports = {
         const args = split.slice(1);
 
         const member = getUserFromMention(args[0], client);
+        
 
         if(!member)
         {
