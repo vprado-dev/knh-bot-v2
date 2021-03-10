@@ -5,7 +5,7 @@ module.exports = async client => {
     client.user.setPresence({
         status: 'online',
         activity: {
-            name: "k!help",
+            name: process.env.COMMAND_PREFIX+"help",
             type: "PLAYING"
         }
     });
