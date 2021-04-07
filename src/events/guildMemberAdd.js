@@ -17,8 +17,13 @@ module.exports = async (client, member) => {
 	)
 	.setDescription(boasVindasTxt)
 	.setThumbnail(avatarUrl != null ? avatarUrl : 'https://cdn.discordapp.com/embed/avatars/0.png')
-	.setImage('https://media1.tenor.com/images/70b97026bfd3557d4a5c7a97423f7e4b/tenor.gif');
+	.setImage('https://media1.tenor.com/images/70b97026bfd3557d4a5c7a97423f7e4b/tenor.gif')
+	.setFooter("© 2021 Kornoha ~Pradito#8853");
 	
+
+	const role = member.guild.roles.cache.find(r => r.name === "Toki");
+	member.roles.add(role);
+
 	client.users.cache
 	.get(member.user.id)
 	.send(boasVindas)
