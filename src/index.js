@@ -1,21 +1,16 @@
 const Discord = require('discord.js');
 const fs = require('fs-extra');
-const Enmap = require('enmap');
 
 const client = new Discord.Client({ forceFetchUsers: true });
 
 require('dotenv').config();
 
-client.commands = new Enmap();
+client.commands = new Map();
 
-const init = async() => {
-
-    const cmdFiles = await fs.readdir('src/commands/');
-    console.log(
-		'[#LOG]',
-		`Carregando o total de ${cmdFiles.length} comandos.`
-	);
-    cmdFiles.forEach(f => {
+const init = async () => {
+	const cmdFiles = await fs.readdir('src/commands/');
+	console.log('[#LOG]', `Carregando o total de ${cmdFiles.length} comandos.`);
+	cmdFiles.forEach((f) => {
 		try {
 			const props = require(`./commands/${f}`);
 			if (f.split('.').slice(-1)[0] !== 'js') return;
@@ -28,17 +23,17 @@ const init = async() => {
 		}
 	});
 
-    const evntFiles = await fs.readdir('src/events/');
+	const evntFiles = await fs.readdir('src/events/');
 	console.log('[#LOG]', `Carregando o total de ${evntFiles.length} eventos.`);
-	evntFiles.forEach(f => {
+	evntFiles.forEach((f) => {
 		const eventName = f.split('.')[0];
 
 		const event = require(`./events/${f}`);
 
-        client.on(eventName, event.bind(null,client));
+		client.on(eventName, event.bind(null, client));
 	});
 
-	client.on('error', err => console.error('[#ERROR]', err));
+	client.on('error', (err) => console.error('[#ERROR]', err));
 
 	client.login(process.env.AUTH_TOKEN);
 };
