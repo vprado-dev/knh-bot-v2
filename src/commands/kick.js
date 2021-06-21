@@ -20,12 +20,10 @@ module.exports = {
     });
     return message.channel.send(kickMsg);
   },
-  get command() {
-    return {
-      name: 'kick',
-      category: 'ADM',
-      description: 'Aplica um kick o usuário mencionado',
-      usage: 'Moderadores',
-    };
+  command: {
+    name: 'kick',
+    category: 'ADM',
+    description: 'Aplica um kick o usuário mencionado',
+    usage: 'Moderadores',
   },
 };

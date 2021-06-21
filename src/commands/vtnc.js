@@ -23,12 +23,10 @@ module.exports = {
 
     return message.channel.send(vtncDedao);
   },
-  get command() {
-    return {
-      name: 'vtnc',
-      category: '4fun',
-      description: 'Manda tomar no cu',
-      usage: 'Geral',
-    };
+  command: {
+    name: 'vtnc',
+    category: '4fun',
+    description: 'Manda tomar no cu',
+    usage: 'Geral',
   },
 };

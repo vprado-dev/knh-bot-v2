@@ -23,12 +23,10 @@ module.exports = {
       .fetch({ limit: args[0] })
       .then((messages) => message.channel.bulkDelete(messages));
   },
-  get command() {
-    return {
-      name: 'clear',
-      category: 'ADM',
-      description: 'Exclui o número de mensagens especificadas (MAX 25)',
-      usage: 'Moderadores',
-    };
+  command: {
+    name: 'clear',
+    category: 'ADM',
+    description: 'Exclui o número de mensagens especificadas (MAX 25)',
+    usage: 'Moderadores',
   },
 };
