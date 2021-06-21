@@ -1,32 +1,41 @@
 {
-	"name": "kornohabot-remastered",
-	"version": "0.0.1",
-	"description": "4fun discord bot",
-	"main": "index.js",
-	"scripts": {
-		"dev": "nodemon src/index.js",
-		"start": "node src/index.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/VinicinhuSZ/kornohaBot-Remastered.git"
-	},
-	"contributors": [
-		"Vinicius Prado Cavagna",
-		"João Pedro Ribeiro da Silva"
-	],
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/VinicinhuSZ/kornohaBot-Remastered/issues"
-	},
-	"homepage": "https://github.com/VinicinhuSZ/kornohaBot-Remastered#readme",
-	"dependencies": {
-		"discord.js": "^12.5.1",
-		"dotenv": "^8.2.0",
-		"fs-extra": "^9.1.0",
-		"kayn": "^0.10.2"
-	},
-	"devDependencies": {
-		"nodemon": "^2.0.7"
-	}
+  "name": "kornoha-bot-v2",
+  "version": "0.0.1",
+  "description": "4fun discord bot",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinicinhuSZ/kornohaBot-Remastered.git"
+  },
+  "contributors": [
+    "Vinicius Prado Cavagna",
+    "João Pedro Ribeiro da Silva"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinicinhuSZ/kornohaBot-Remastered/issues"
+  },
+  "homepage": "https://github.com/VinicinhuSZ/kornohaBot-Remastered#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^10.0.0",
+    "fs-extra": "^10.0.0",
+    "kayn": "^0.10.2"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --check"
+    ]
+  }
 }

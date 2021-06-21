@@ -1,5 +1,4 @@
-
 module.exports = {
-    isCommand: message =>
-		message.content.startsWith(process.env.COMMAND_PREFIX),
+  isCommand: (message) =>
+    message.content.startsWith(process.env.COMMAND_PREFIX),
 };
