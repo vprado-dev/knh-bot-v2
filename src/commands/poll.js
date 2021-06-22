@@ -28,10 +28,17 @@ function createJson(args) {
 
 module.exports = {
   validate(client, message, args) {
+    const split = message.content.split(movieRegex);
+    const argsFormated = split.slice(1).filter((e) => String(e).trim());
+
     if (!message.member.hasPermission('MANAGE_GUILD')) {
       throw new Error('no_permissions');
     }
-    if (!args[0] || args.length < 2 || args.length > 10) {
+    if (
+      !argsFormated[0] ||
+      argsFormated.length < 2 ||
+      argsFormated.length > 10
+    ) {
       message.reply(
         'Precisa pelo menos informar os argumentos -  (MIN: 2/ MAX: 10)',
       );
