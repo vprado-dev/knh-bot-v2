@@ -1,4 +1,5 @@
 const { getUserFromMention } = require('../util/getUser');
+const categories = require('../usersCategory');
 
 module.exports = {
   run(client, message, args) {
@@ -25,7 +26,7 @@ module.exports = {
   },
   command: {
     name: 'vtnc',
-    category: '4fun',
+    category: categories.USER,
     description: 'Manda tomar no cu',
     usage: 'Geral',
   },

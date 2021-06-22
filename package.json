@@ -19,8 +19,7 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^10.0.0",
-    "fs-extra": "^10.0.0",
-    "kayn": "^0.10.2"
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "husky": "^6.0.0",

@@ -1,3 +1,5 @@
+const categories = require('../usersCategory');
+
 module.exports = {
   validate(client, message, args) {
     if (!message.member.hasPermission('MANAGE_MESSAGES', 'MANAGE_GUILD')) {
@@ -25,7 +27,7 @@ module.exports = {
   },
   command: {
     name: 'clear',
-    category: 'ADM',
+    category: categories.MOD,
     description: 'Exclui o número de mensagens especificadas (MAX 25)',
     usage: 'Moderadores',
   },

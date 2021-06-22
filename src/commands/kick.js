@@ -1,4 +1,5 @@
 const { getUserFromMention } = require('../util/getUser');
+const categories = require('../usersCategory');
 
 module.exports = {
   validate(client, message, args) {
@@ -10,7 +11,7 @@ module.exports = {
       throw new Error('invalid_syntax');
     }
   },
-  async run(client, message, args) {
+  run(client, message, args) {
     let kickMsg = `Os seguintes usuários foram kickados:\n`;
     args.map(async (value, index) => {
       let member = getUserFromMention(value, client);
@@ -22,7 +23,7 @@ module.exports = {
   },
   command: {
     name: 'kick',
-    category: 'ADM',
+    category: categories.MOD,
     description: 'Aplica um kick o usuário mencionado',
     usage: 'Moderadores',
   },
