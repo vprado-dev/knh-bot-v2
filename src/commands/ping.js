@@ -1,8 +1,6 @@
 module.exports = {
   run: (client, message) => {
-    message.channel.send(
-      `\`\`📡\`\` Latência da API: ${Math.round(client.ping)}ms.`,
-    );
+    message.channel.send(`→ Latência da API: ${Math.round(client.ws.ping)}ms.`);
   },
   command: {
     name: 'ping',
