@@ -5,10 +5,7 @@ module.exports = {
     if (!message.member.hasPermission('MANAGE_MESSAGES', 'MANAGE_GUILD')) {
       throw new Error('no_permissions');
     }
-    if (!args[0]) {
-      message.reply(
-        'Lembre-se de específicar o número de mensagens que deseja excluir (Máximo 25)',
-      );
+    if (!args[0] && args.length === 0) {
       throw new Error('invalid_syntax');
     }
     if (isNaN(args[0])) {
