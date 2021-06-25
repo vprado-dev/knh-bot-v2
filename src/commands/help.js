@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const categories = require('../usersCategory');
 
 module.exports = {
-  async run(client, message) {
+  async run(client, message, args) {
     const commandFiles = await fs.readdir('src/commands');
 
     let str = '';
