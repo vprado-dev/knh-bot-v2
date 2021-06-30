@@ -6,4 +6,5 @@ services:
       - AUTH_TOKEN=$AUTH_TOKEN
       - COMMAND_PREFIX=$COMMAND_PREFIX
       - GUILD_ID=$GUILD_ID
+      - API_URL=$API_URL
     restart: always

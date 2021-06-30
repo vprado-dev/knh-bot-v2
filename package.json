@@ -19,7 +19,8 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^10.0.0",
-    "fs-extra": "^10.0.0"
+    "fs-extra": "^10.0.0",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "husky": "^6.0.0",

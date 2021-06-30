@@ -1,7 +1,7 @@
 const categories = require('../usersCategory');
 
 module.exports = {
-  run: (client, message) => {
+  run(client, message) {
     message.channel.send(`→ Latência da API: ${Math.round(client.ws.ping)}ms.`);
   },
   command: {
