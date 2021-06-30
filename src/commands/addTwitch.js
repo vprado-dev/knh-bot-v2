@@ -3,8 +3,14 @@ const fetch = require('node-fetch');
 
 module.exports = {
   async run(client, message, args) {
-    await fetch(process.env.API_URL, {
+    const url = new URL(process.env.API_URL);
+    url.pathname = '/twitchAccountLink';
+
+    await fetch(url.toString(), {
       method: 'POST',
+      headers: {
+        authorization: 'Bearer test',
+      },
     });
   },
   command: {
