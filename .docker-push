@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-require('dotenv').config();
+require('dotenv-safe').config();
 
 const path = require('path');
 const { version } = require(path.join(__dirname, 'package.json'));
