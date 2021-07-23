@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/VinicinhuSZ/kornohaBot-Remastered#readme",
   "dependencies": {
+    "@ev-fns/spawn": "^0.1.2",
     "discord.js": "^12.5.1",
     "dotenv": "^10.0.0",
     "fs-extra": "^10.0.0",
@@ -31,7 +32,9 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docker-build": "./.docker-build",
+    "docker-push": "./.docker-push"
   },
   "lint-staged": {
     "*.js": [
