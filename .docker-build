@@ -7,7 +7,7 @@ const { version } = require(path.join(__dirname, 'package.json'));
 const { spawn } = require('@ev-fns/spawn');
 
 (async () => {
-  const image = process.env.API_IMAGE;
+  const image = process.env.APP_IMAGE;
 
   await spawn(`docker build -t ${image}:latest .`);
   await spawn(`docker tag ${image}:latest ${image}:${version}`);

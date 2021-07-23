@@ -2,9 +2,7 @@ version: '3'
 services:
   bot:
     build: .
-    environment:
-      - AUTH_TOKEN=$AUTH_TOKEN
-      - COMMAND_PREFIX=$COMMAND_PREFIX
-      - GUILD_ID=$GUILD_ID
-      - API_URL=$API_URL
+    image: $APP_IMAGE
+    env_file:
+      - .env
     restart: always
