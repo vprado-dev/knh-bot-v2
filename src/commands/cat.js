@@ -26,6 +26,7 @@ module.exports = {
       return message.channel.send(catMessage);
     } catch (err) {
       console.log(`[#ERROR] Não foi possível executar o comando: ${err}`);
+      return;
     }
   },
   command: {
