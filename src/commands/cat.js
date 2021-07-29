@@ -16,10 +16,12 @@ module.exports = {
 
       const responseJSON = await response.json();
 
+      const author = message.author;
+
       const catMessage = new Discord.MessageEmbed()
         .setColor('#f74b84')
         .setTitle('Gatoooooooooooo')
-        .setDescription('Aqui está o seu gatinho')
+        .setDescription(`Aqui está o seu gatinho ${author}`)
         .setImage(responseJSON[0].url)
         .setFooter('© 2021 Kornoha ~ Pradito#8853');
 
