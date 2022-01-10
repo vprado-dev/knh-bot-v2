@@ -1,4 +1,4 @@
-# kornoha-bot-v2
+# knh-bot-v2
 4fun discord bot
 
 <h1>Para rodar o projeto</h1>
